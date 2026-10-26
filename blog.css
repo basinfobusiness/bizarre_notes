@@ -37,3 +37,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.25rem;
   color: #727272;
 }
+
+.from-beginning {
+  font-variant: small-caps;
+  font-weight: bold;
+}
