@@ -215,9 +215,9 @@
                 </path>
               </svg>
             </a>
-            <a class="btn btn-sm btn-outline-secondary" href="#">
+            <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#signupModal">
               Sign up
-            </a>
+            </button>
           </div>
         </div>
       </header>
@@ -991,6 +991,34 @@
         </a>
       </p>
     </footer>
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="signupModalLabel">Sign up for updates</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Join our email newsletter for updates from Bizarre Notes.</p>
+              <div class="mb-3">
+                <label for="signupFullName" class="form-label">Full name</label>
+                <input type="text" class="form-control" id="signupFullName" name="fullname" autocomplete="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="signupEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="signupEmail" name="email" autocomplete="email" required>
+              </div>
+              <p class="form-text mb-0">Newsletter sign-up will be available once the mailing list is connected.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" disabled>Sign up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm">
     </script>
   </body>
