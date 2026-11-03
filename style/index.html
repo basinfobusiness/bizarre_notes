@@ -47,8 +47,26 @@
       <section class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
         <h1 class="display-4 fst-italic">Style</h1>
         <p class="lead">Explore the style articles and creations from Bizarre Notes.</p>
-        <a class="btn btn-primary" href="../album/index.html">Open the Creation Album</a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#creationAlbumModal">Open the Creation Album</button>
       </section>
     </main>
+    <div class="modal fade" id="creationAlbumModal" tabindex="-1" aria-labelledby="creationAlbumModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="creationAlbumModalLabel">Creation Album</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Continue to the Creation Album?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a class="btn btn-primary" href="#" aria-disabled="true">Continue</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
