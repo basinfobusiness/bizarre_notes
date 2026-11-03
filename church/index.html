@@ -47,7 +47,7 @@
       <section class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
         <h1 class="display-4 fst-italic">Church</h1>
         <p class="lead">Explore the church resources and articles from Bizarre Notes.</p>
-        <a class="btn btn-primary" href="../cheatsheet/index.html">Open the Church Cheatsheet</a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#churchCheatsheetModal">Open the Church Cheatsheet</button>
       </section>
       <section aria-label="Religions">
         <div class="row g-4">
@@ -88,5 +88,23 @@
         <p>Christianity and Islam are generally estimated to be the world's two largest religions by number of adherents. Their global reach reflects long histories of growth, migration, conversion, and community life. Traditional and Indigenous religions are not usually counted as a single religion: they encompass many local traditions, and people may practice them alongside a larger religious identity, making comparisons difficult. Most global estimates place Hinduism third by adherents.</p>
       </section>
     </main>
+    <div class="modal fade" id="churchCheatsheetModal" tabindex="-1" aria-labelledby="churchCheatsheetModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="churchCheatsheetModalLabel">Church Cheatsheet</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Continue to the Church Cheatsheet?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a class="btn btn-primary" href="#" aria-disabled="true">Continue</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
