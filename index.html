@@ -204,7 +204,7 @@
             </a>
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
-            <a class="link-secondary" href="#" aria-label="Search">
+            <button class="btn btn-link link-secondary p-0" type="button" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="Search">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24">
                 <title>
                   Search
@@ -214,7 +214,7 @@
                 <path d="M21 21l-5.2-5.2">
                 </path>
               </svg>
-            </a>
+            </button>
             <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#signupModal">
               Sign up
             </button>
@@ -1137,7 +1137,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.facebook.com/profile.php?id=100019298043609" target="_blank">
                     Facebook
                   </a>
                 </li>
@@ -1229,7 +1229,7 @@
                 </div>
               </div>
             </fieldset>
-            <p class="form-text mb-0 mt-3">Your choices stay selected while this page is open. Subscription saving will be available once the mailing list is connected.</p>
+            <p class="form-text mb-0 mt-3">Your topic choices stay selected while this page is open. To receive email updates, <a href="https://eepurl.com/cWRBXr0yvq" target="_blank" rel="noopener noreferrer">sign up for the mailing list</a>.</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -1241,26 +1241,36 @@
     <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <form>
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="signupModalLabel">Sign up for updates</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="mb-0">Join the Bizarre Notes email newsletter through our mailing list.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a class="btn btn-primary" href="https://eepurl.com/cWRBXr0yvq" target="_blank" rel="noopener noreferrer">Join the mailing list</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <form id="searchForm" role="search">
             <div class="modal-header">
-              <h2 class="modal-title fs-5" id="signupModalLabel">Sign up for updates</h2>
+              <h2 class="modal-title fs-5" id="searchModalLabel">Search notes</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <p>Join our email newsletter for updates from Bizarre Notes.</p>
-              <div class="mb-3">
-                <label for="signupFullName" class="form-label">Full name</label>
-                <input type="text" class="form-control" id="signupFullName" name="fullname" autocomplete="name" required>
-              </div>
-              <div class="mb-3">
-                <label for="signupEmail" class="form-label">Email</label>
-                <input type="email" class="form-control" id="signupEmail" name="email" autocomplete="email" required>
-              </div>
-              <p class="form-text mb-0">Newsletter sign-up will be available once the mailing list is connected.</p>
+              <label for="searchInput" class="form-label">Search the notes</label>
+              <input type="search" class="form-control" id="searchInput" name="q" placeholder="Enter a word or phrase" autocomplete="off">
+              <p id="searchStatus" class="form-text mt-2" role="status" aria-live="polite">Type a word or phrase to search the notes.</p>
+              <ul id="searchResults" class="list-group list-group-flush"></ul>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary" disabled>Sign up</button>
             </div>
           </form>
         </div>
