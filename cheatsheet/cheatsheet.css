@@ -5,6 +5,10 @@ body {
   user-select: none;
 }
 
+.from-beginning{
+  font-variant: small-caps;
+}
+
 /**
  * Bootstrap "Journal code" icon
  * @link https://icons.getbootstrap.com/icons/journal-code/
