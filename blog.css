@@ -51,3 +51,10 @@ h1, h2, h3, h4, h5, h6 {
 .continue-reading:hover{
   cursor: pointer;
 }
+
+.kudos {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  font-size: 1.25rem;
+  color: #727272;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
