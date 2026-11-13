@@ -58,3 +58,20 @@ h1, h2, h3, h4, h5, h6 {
   color: #727272;
   transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
+
+.featured-card-image {
+  position: relative;
+  flex: 0 0 200px;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.featured-card-image--marriage {
+  background-image: url("images/marriage.png");
+}
+
+.featured-card-image--enticement {
+  background-image: url("images/B11-Growing-Up.png");
+}
