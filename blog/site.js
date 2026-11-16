@@ -3,15 +3,15 @@ const AlbumFunction = function(){
     switch(Album_Name){
         case "Marriage":
             Preloader();
-            window.location.href = "http://bizarrenotes.freepage.cc/album/index.html#Marriage";
+            window.location.href = "album/index.html#Marriage";
             break;
         case "Enticement":
             Preloader();
-            window.location.href = "http://bizarrenotes.freepage.cc/album/index.html#Enticement";
+            window.location.href = "album/index.html#Enticement";
             break
         case "Bizarre":
             Preloader();
-            window.location.href = "http://bizarrenotes.freepage.cc/album/index.html#Bizarre";
+            window.location.href = "album/index.html#Bizarre";
             break;
         default:
             console.log(Album_Name);
@@ -21,7 +21,7 @@ const AlbumFunction = function(){
 
 const Cheatsheet = function(){
     Preloader();
-    window.location.href = "http://bizarrenotes.freepage.cc/cheatsheet/index.html";
+    window.location.href = "cheatsheet/index.html";
 }
 
 function Preloader(){
@@ -133,11 +133,7 @@ document.addEventListener("DOMContentLoaded", function(){
             const excerpt = document.createElement("span");
 
             link.className = "list-group-item list-group-item-action";
-            const pagePath = window.location.pathname.replace(/^\/blog(?=\/|$)/, "") || "/";
-            link.href = new URL(
-                pagePath + window.location.search + "#" + note.element.id,
-                "http://bizarrenotes.freepage.cc/"
-            ).href;
+            link.href = "#" + note.element.id;
             title.className = "d-block";
             title.textContent = note.title;
             excerpt.className = "small text-body-secondary";
@@ -155,12 +151,12 @@ document.addEventListener("DOMContentLoaded", function(){
     });
     searchResults.addEventListener("click", function(event){
         const link = event.target instanceof Element
-            ? event.target.closest("a")
+            ? event.target.closest("a[href^='#']")
             : null;
 
         if (link && searchResults.contains(link)) {
             event.preventDefault();
-            pendingSearchTarget = link.hash;
+            pendingSearchTarget = link.getAttribute("href");
             window.bootstrap.Modal.getOrCreateInstance(searchModal).hide();
         }
     });
